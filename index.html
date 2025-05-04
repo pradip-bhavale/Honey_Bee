@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bee House Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🐝 Bee House Monitor</h1>
+
+    <div class="cards">
+      <div class="card">
+        <h2>🌡 Temperature</h2>
+        <p id="temperature">-- °C</p>
+      </div>
+      <div class="card">
+        <h2>💧 Humidity</h2>
+        <p id="humidity">-- %</p>
+      </div>
+      <div class="card">
+        <h2>🌀 Fan</h2>
+        <p id="fan-status">--</p>
+        <label class="switch">
+          <input type="checkbox" id="fan-toggle"/>
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="graph-toggle">
+      <button onclick="showGraph('temperature')">Temperature Graph</button>
+      <button onclick="showGraph('humidity')">Humidity Graph</button>
+    </div>
+
+    <div class="chart-container">
+      <canvas id="graphCanvas"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
